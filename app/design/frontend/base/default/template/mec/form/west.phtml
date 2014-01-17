@@ -1,0 +1,44 @@
+<?php $_code=$this->getMethodCode() ?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+	<li>
+		<label><?php echo $this->__('Our Account') ?></label>
+		<div class="input-box">
+			<label><?php echo Mage::getStoreConfig('payment/pay/our_account', $store = null); ?></label>
+		</div>
+	</li>
+	<li>
+        <label for="<?php echo $_code ?>_sender_first_name" class="required"><em>*</em><?php echo $this->__('Sender First Name') ?></label>
+        <div class="input-box">
+            <input type="text" id="<?php echo $_code ?>_sender_first_name" name="payment[pay_sender_first_name]" title="<?php echo $this->__('Sender First Name') ?>" class="input-text required-entry" value="" />
+        </div>
+    </li>
+
+	
+	<li>
+        <label for="<?php echo $_code ?>_sender_last_name" class="required"><em>*</em><?php echo $this->__('Sender Last Name') ?></label>
+        <div class="input-box">
+            <input type="text" id="<?php echo $_code ?>_sender_last_name" name="payment[pay_sender_last_name]" title="<?php echo $this->__('Sender Last Name') ?>" class="input-text required-entry" value="" />
+        </div>
+    </li>
+	
+	<li>
+        <label for="<?php echo $_code ?>_from_country" class="required"><em>*</em><?php echo $this->__('Transfer From Country') ?></label>
+        <div class="input-box">
+            <input type="text" id="<?php echo $_code ?>_from_country" name="payment[pay_from_country]" title="<?php echo $this->__('Transfer From Country') ?>" class="input-text required-entry" value="" />
+        </div>
+    </li>
+	
+	<li>
+        <label for="<?php echo $_code ?>_mtcn" class="required"><em>*</em><?php echo $this->__('Money Transfer Control Number (MTCN)') ?></label>
+        <div class="input-box">
+            <input type="text" id="<?php echo $_code ?>_mtcn" name="payment[pay_mtcn]" title="<?php echo $this->__('Money Transfer Control Number (MTCN)') ?>" class="input-text required-entry" value="" />
+        </div>
+    </li>
+	
+	<li>
+        <label for="<?php echo $_code ?>_amount_sent" class="required"><em>*</em><?php echo $this->__('Amount Sent') ?></label>
+        <div class="input-box">
+            <input type="text" id="<?php echo $_code ?>_amount_sent" name="payment[pay_amount_sent]" title="<?php echo $this->__('Amount Sent') ?>" class="input-text required-entry" value="" />
+        </div>
+    </li>
+</ul>
